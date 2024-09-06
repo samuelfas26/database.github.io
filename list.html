@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Militares</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilo para o botão de Home */
+        .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: #ff003b;
+            color: #fff;
+            border: 2px solid #ff003b;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .home-button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        /* Estilo para a tabela */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 60px; /* Espaçamento para o botão de Home */
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        td {
+            font-weight: normal;
+        }
+
+        .actions button {
+            background: #ff003b;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .actions button:hover {
+            background: #d1002a;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="home-button">
+        <img src="icon.png" alt="Home">
+        <span>Home</span>
+    </a>
+
+    <div class="container">
+        <h1>Lista de Militares</h1>
+        <table id="militaresTable">
+            <thead>
+                <tr>
+                    <th>Posto</th>
+                    <th>Nome</th>
+                    <th>Seção</th>
+                    <th>OM</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dados serão inseridos aqui via JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function loadMilitares() {
+            const tableBody = document.querySelector('#militaresTable tbody');
+            
+            fetch('data.json')
+                .then(response => response.json())
+                .then(militares => {
+                    tableBody.innerHTML = ''; // Limpa a tabela antes de adicionar novos dados
+
+                    militares.forEach((militar, index) => {
+                        const row = document.createElement('tr');
+
+                        row.innerHTML = `
+                            <td><strong>${militar.posto}</strong></td>
+                            <td><strong>${militar.nome}</strong></td>
+                            <td><strong>${militar.secao}</strong></td>
+                            <td><strong>${militar.om}</strong></td>
+                            <td class="actions">
+                                <button onclick="editMilitar(${index})">Editar</button>
+                                <button onclick="deleteMilitar(${index})">Excluir</button>
+                            </td>
+                        `;
+
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('Erro ao carregar dados:', error));
+        }
+
+        function editMilitar(index) {
+            // Carregar os dados do militar para edição
+            // Implementar função de edição se necessário
+        }
+
+        function deleteMilitar(index) {
+            // Implementar função de exclusão se necessário
+        }
+
+        // Carregar militares ao abrir a página
+        document.addEventListener('DOMContentLoaded', loadMilitares);
+    </script>
+</body>
+</html>

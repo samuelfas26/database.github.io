@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Militar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro Militar</h1>
+        <form id="cadastroForm">
+            <label for="posto">Posto Graduação:</label>
+            <select id="posto" name="posto" required>
+                <option value="marechal">Marechal</option>
+                <option value="general_exercito">General de Exército</option>
+                <option value="general_divisao">General de Divisão</option>
+                <option value="general_brigada">General de Brigada</option>
+                <option value="coronel">Coronel</option>
+                <option value="tenente_coronel">Tenente-Coronel</option>
+                <option value="major">Major</option>
+                <option value="capitao">Capitão</option>
+                <option value="1o_tenente">1º Tenente</option>
+                <option value="2o_tenente">2º Tenente</option>
+                <option value="sargento_mor">Sargento-Mor</option>
+                <option value="sargento">Sargento</option>
+                <option value="cabo">Cabo</option>
+                <option value="soldado">Soldado</option>
+            </select>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="secao">Seção:</label>
+            <select id="secao" name="secao" required>
+                <option value="s1">S1 (Administração de Pessoal)</option>
+                <option value="s2">S2 (Inteligência)</option>
+                <option value="s3">S3 (Operações)</option>
+                <option value="aprovisionamento">Aprovisionamento (Suprimentos)</option>
+                <option value="relacoes_publicas">Relações Públicas</option>
+                <option value="primeiro_pelotao">Primeiro Pelotão</option>
+                <option value="segundo_pelotao">Segundo Pelotão</option>
+                <option value="terceiro_pelotao">Terceiro Pelotão</option>
+                <option value="quarto_pelotao">Quarto Pelotão</option>
+                <option value="subtenencia">Subtenência (Suporte e Manutenção de Material)</option>
+                <option value="canil">Canil (Seção de Cães)</option>
+                <option value="garagem">Garagem (Manutenção de Veículos)</option>
+                <option value="sti">STI (Seção de Tecnologia da Informação)</option>
+                <option value="comandante">Comandante (Comando da Companhia)</option>
+                <option value="prefeitura">Prefeitura (Administração Local)</option>
+                <option value="saude">Saúde (Seção de Saúde)</option>
+                <option value="almoxarifado">Almoxarifado (Armazenamento de Materiais)</option>
+                <option value="pel_com">Pel Com (Pelotão de Comunicações)</option>
+            </select>
+
+            <label for="om">OM (Organização Militar):</label>
+            <select id="om" name="om" required>
+                <option value="1_bda_c_mec">1ª Brigada de Cavalaria Mecanizada (1ª Bda C Mec)</option>
+                <option value="2_bda_c_mec">2ª Brigada de Cavalaria Mecanizada (2ª Bda C Mec)</option>
+                <option value="6_batalhao_fronteira">Comando de Fronteira – 6º Batalhão de Infantaria de Fronteira (6º Batalhão de Infantaria de Fronteira)</option>
+                <option value="17_batalhao_fronteira">Comando de Fronteira – 17º Batalhão de Fronteira (17º Batalhão de Fronteira)</option>
+                <option value="19_batalhao_fronteira">Comando de Fronteira – 19º Batalhão de Fronteira (19º Batalhão de Fronteira)</option>
+                <option value="24_batalhao_fronteira">Comando de Fronteira – 24º Batalhão de Fronteira (24º Batalhão de Fronteira)</option>
+                <option value="35_batalhao_fronteira">Comando de Fronteira – 35º Batalhão de Fronteira (35º Batalhão de Fronteira)</option>
+                <option value="gac_c_selva">Grupo de Artilharia de Campanha de Selva (GAC C Selva)</option>
+                <option value="rc_f">Regimento de Cavalaria de Fronteira (RC F)</option>
+                <option value="clf">Comando Logístico de Fronteira (CLF)</option>
+            </select>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <div class="wrapper">
+        <a href="list.html"><span>Ir para Lista</span></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+    {
+        "posto": "marechal",
+        "nome": "Eduardo Gomes",
+        "secao": "s1",
+        "om": "1_bda_c_mec"
+    },
+    {
+        "posto": "general_exercito",
+        "nome": "Carlos Silva",
+        "secao": "s3",
+        "om": "2_bda_c_mec"
+    },
+    {
+        "posto": "coronel",
+        "nome": "Ana Costa",
+        "secao": "subtenencia",
+        "om": "6_batalhao_fronteira"
+    },
+    {
+        "posto": "capitao",
+        "nome": "Lucas Pereira",
+        "secao": "sti",
+        "om": "17_batalhao_fronteira"
+    },
+    {
+        "posto": "sargento",
+        "nome": "Maria Oliveira",
+        "secao": "primeiro_pelotao",
+        "om": "19_batalhao_fronteira"
+    },
+    {
+        "posto": "soldado",
+        "nome": "João Silva",
+        "secao": "canil",
+        "om": "24_batalhao_fronteira"
+    }
+]
